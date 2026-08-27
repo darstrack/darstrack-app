@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarsTrack | درس تراك — متابعة الحصص والتقارير</title>
+<meta name="description" content="درس تراك — منظومة متابعة الحصص والتقارير للمعلمين وأولياء الأمور. تقارير فورية بدون رسايل واتساب ولا متابعة ورقية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Cairo','Segoe UI',Tahoma,Arial,sans-serif; background:#0B0D22; color:#F6F4FF; line-height:1.7; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+  
+  /* Hero */
+  .hero { text-align:center; padding:70px 20px 60px; background:linear-gradient(160deg,#0B0D22 0%,#151737 55%,#241B4A 100%); position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:520px; height:520px; background:radial-gradient(circle,#9568FF22 0%,transparent 70%); }
+  .logo-mark { width:86px; height:86px; margin:0 auto 18px; border-radius:24px; background:linear-gradient(135deg,#9568FF,#6C3EE8); display:flex; align-items:center; justify-content:center; font-size:40px; font-weight:900; color:#fff; box-shadow:0 12px 40px #9568FF55; }
+  h1 { font-size:42px; font-weight:900; letter-spacing:-.5px; }
+  h1 .ar { color:#9568FF; }
+  .tagline { font-size:19px; color:#AAA6C4; margin-top:8px; }
+  .badges { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px; }
+  .badge { background:#9568FF22; border:1px solid #9568FF55; color:#C9B5FF; padding:5px 14px; border-radius:99px; font-size:13px; font-weight:700; }
+  
+  /* Downloads */
+  .dl { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:34px; }
+  .btn { display:block; text-decoration:none; padding:15px 34px; border-radius:16px; font-weight:900; font-size:17px; transition:transform .15s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn-teacher { background:linear-gradient(135deg,#9568FF,#6C3EE8); color:#fff; box-shadow:0 8px 24px #9568FF44; }
+  .btn-parent { background:#1A1B35; color:#F6F4FF; border:1.5px solid #3F3B70; }
+  .btn small { display:block; font-size:11px; font-weight:400; opacity:.8; }
+  
+  /* Sections */
+  section { padding:56px 0; }
+  h2 { text-align:center; font-size:28px; font-weight:900; margin-bottom:8px; }
+  .sub { text-align:center; color:#AAA6C4; margin-bottom:40px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; }
+  .card { background:#151737; border:1px solid #2A2C55; border-radius:18px; padding:24px; }
+  .card .ic { font-size:30px; margin-bottom:10px; }
+  .card h3 { font-size:17px; margin-bottom:6px; color:#fff; }
+  .card p { font-size:14px; color:#AAA6C4; }
+  
+  /* How it works */
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+  .step { background:#151737; border:1px solid #2A2C55; border-radius:18px; padding:22px; text-align:center; }
+  .step .num { width:40px; height:40px; margin:0 auto 10px; border-radius:50%; background:linear-gradient(135deg,#9568FF,#6C3EE8); display:flex; align-items:center; justify-content:center; font-weight:900; }
+  .step h3 { font-size:16px; margin-bottom:4px; }
+  .step p { font-size:13px; color:#AAA6C4; }
+  
+  /* Audience */
+  .aud { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+  .aud-card { border-radius:20px; padding:28px; }
+  .aud-t { background:linear-gradient(135deg,#9568FF22,#9568FF08); border:1.5px solid #9568FF55; }
+  .aud-p { background:#151737; border:1px solid #2A2C55; }
+  .aud-card h3 { font-size:20px; margin-bottom:12px; }
+  .aud-card li { list-style:none; padding:6px 0; font-size:15px; color:#DDD9F5; }
+  .aud-card li::before { content:'✓ '; color:#6FE0A4; font-weight:900; }
+  
+  .cta { text-align:center; background:linear-gradient(135deg,#241B4A,#151737); border:1px solid #3F3B70; border-radius:24px; padding:44px 24px; }
+  .cta h2 { margin-bottom:10px; }
+  
+  footer { text-align:center; padding:36px 20px; color:#687D94; font-size:13px; border-top:1px solid #1E2040; }
+  footer a { color:#9568FF; text-decoration:none; }
+  .rebrand-note { background:#9568FF11; border:1px dashed #9568FF44; border-radius:14px; padding:14px 18px; margin-top:18px; font-size:13px; color:#C9B5FF; }
+  @media(max-width:600px){ h1{font-size:32px} .tagline{font-size:16px} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="logo-mark">📚</div>
+  <h1>DarsTrack <span class="ar">| درس تراك</span></h1>
+  <div class="tagline">متابعة الحصص والتقارير — للمعلمين وأولياء الأمور</div>
+  <div class="badges">
+    <span class="badge">⚡ تقارير فورية</span>
+    <span class="badge">📵 من غير واتساب</span>
+    <span class="badge">📄 من غير ورق</span>
+  </div>
+  <div class="dl">
+    <a class="btn btn-teacher" href="https://github.com/darstrack/darstrack-app/releases/download/teacher-v1.7/DarsTrack-Teacher-v1.7.apk">📱 حمّل نسخة المعلم<small>للمدرسين والمدرسات</small></a>
+    <a class="btn btn-parent" href="https://github.com/darstrack/darstrack-app/releases/download/parent-v1.7/DarsTrack-Parent-v1.7.apk">👨‍👩‍👦 حمّل نسخة ولي الأمر<small>متابعة الأبناء لحظة بلحظة</small></a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>ليه DarsTrack؟</h2>
+    <div class="sub">لأن وقت المعلم والأب أغلى من اللي بيضيع في المتابعة اليدوية</div>
+    <div class="grid">
+      <div class="card"><div class="ic">⚡</div><h3>تقارير فورية تلقائية</h3><p>المعلم يسجل التقييم مرة واحدة — وولي الأمر يستلمه فورًا من غير أي رسايل أو مكالمات.</p></div>
+      <div class="card"><div class="ic">🗓</div><h3>حضور وغياب منظم</h3><p>تسجيل الحضور بثواني — مع إشعار فوري لولي الأمر بالغياب أو التأخير.</p></div>
+      <div class="card"><div class="ic">📊</div><h3>متابعة شاملة</h3><p>الواجب والمشاركة والامتحانات ومستوى السداد — كل حاجة في مكان واحد.</p></div>
+      <div class="card"><div class="ic">👨‍👩‍👦</div><h3>كل المدرسين في تطبيق واحد</h3><p>ولي الأمر يتابع كل مدرسين ابنه من تطبيق واحد — والمدرسين يشوفوا كل مجموعاتهم.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#0E102A;">
+  <div class="wrap">
+    <h2>إزاي بتشتغل؟</h2>
+    <div class="sub">ثلاث خطوات بس — ومتنساش الورق والدفاتر تاني</div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>المعلم يسجل</h3><p>الحضور والتقييم والتقرير بضغطة واحدة بعد كل حصة</p></div>
+      <div class="step"><div class="num">2</div><h3>النظام يوصل</h3><p>التقرير بيروح لولي الأمر فورًا مع إشعار على الموبايل</p></div>
+      <div class="step"><div class="num">3</div><h3>الأب يتابع</h3><p>ولي الأمر يفتح التطبيق ويشوف كل حاجة عن ابنه بالتفصيل</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="aud">
+      <div class="aud-card aud-t">
+        <h3>👨‍🏫 للمعلم</h3>
+        <ul>
+          <li>تسجيل الحضور بثواني — حصصك كلها منظمة</li>
+          <li>تقييم الواجب والمشاركة بنظام النجوم</li>
+          <li>تقارير بتتبعت لوحدها — مفيش رسايل واتساب</li>
+          <li>مواعيد مرنة: كل يوم حصة بوقته الخاص</li>
+          <li>إعلانات جماعية لكل أولياء الأمور</li>
+          <li>متابعة المتأخرات والسداد في شاشة واحدة</li>
+        </ul>
+      </div>
+      <div class="aud-card aud-p">
+        <h3>👨‍👩‍👦 لولي الأمر</h3>
+        <ul>
+          <li>تقرير ابنك بيوصلك لحظة إرساله</li>
+          <li>الحضور والغياب والإشعارات الفورية</li>
+          <li>الواجب والمشاركة ودرجات الامتحانات</li>
+          <li>مستوى السداد والمتأخرات بوضوح</li>
+          <li>كل مدرسين ابنك في تطبيق واحد</li>
+          <li>مواعيد الحصص القادمة بالتنبيه</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>ابدأ دلوقتي — مجانًا</h2>
+      <div class="sub" style="margin-bottom:26px;">حمّل النسخة المناسبة ليك في ثانية</div>
+      <div class="dl" style="margin-top:0;">
+        <a class="btn btn-teacher" href="https://github.com/darstrack/darstrack-app/releases/download/teacher-v1.7/DarsTrack-Teacher-v1.7.apk">📱 نسخة المعلم</a>
+        <a class="btn btn-parent" href="https://github.com/darstrack/darstrack-app/releases/download/parent-v1.7/DarsTrack-Parent-v1.7.apk">👨‍👩‍👦 نسخة ولي الأمر</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#C9B5FF;">DarsTrack</strong> — منظومة متابعة تعليمية من مصر 🇪🇬</div>
+    <div style="margin-top:6px;">توبق عليك المتابعة اليدوية — خلّي التقارير توصل لوحدها</div>
+    <div class="rebrand-note">📌 DarsTrack هي الهوية الرسمية الجديدة لصفحتنا — <a href="https://www.facebook.com/profile.php?id=61550850182146" style="color:#C9B5FF;">تابعنا على فيسبوك</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
